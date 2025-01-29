@@ -1,6 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
 import javax.swing.*;
 
 public class Score extends Rectangle {
@@ -26,21 +24,20 @@ public class Score extends Rectangle {
         g.drawString(String.valueOf(player2score), (GAME_WIDTH / 2) + 50, 50);
     }
 
-    // Funkcja do sprawdzania wyników
+
     public void checkWinner() {
-        // Sprawdzamy, czy któryś z graczy osiągnął wymaganą liczbę punktów
         if (player1score >= Panel.POINTS_TO_WIN) {
             endGame("Player 1 Wins!");
-            gameEnded = true;  // Ustawiamy flagę, by zakończyć grę
+            gameEnded = true;
         }
         if (player2score >= Panel.POINTS_TO_WIN) {
             endGame("Player 2 Wins!");
-            gameEnded = true;  // Ustawiamy flagę, by zakończyć grę
+            gameEnded = true;
         }
     }
 
 
-    // Funkcja do kończenia gry i wyświetlania okna końcowego
+    // koniec gry i okno koncowe
     private void endGame(String winnerMessage) {
         JFrame endFrame = new JFrame("Game Over");
         endFrame.setSize(400, 300);
