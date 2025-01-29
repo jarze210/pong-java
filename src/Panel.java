@@ -173,39 +173,6 @@ public class Panel extends JPanel implements Runnable {
     }
 
 
-    private void endGame(String winnerMessage) {
-        JFrame endFrame = new JFrame("Game Over");
-        endFrame.setSize(400, 200);
-        endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        endFrame.setLocationRelativeTo(null);
-
-        JPanel panel = new JPanel();
-        panel.setBackground(Color.BLACK);
-        panel.setLayout(new GridLayout(3, 1));
-
-        JLabel winnerLabel = new JLabel(winnerMessage, SwingConstants.CENTER);
-        winnerLabel.setForeground(Color.WHITE);
-        winnerLabel.setFont(new Font("Consolas", Font.BOLD, 24));
-
-        JLabel scoreLabel = new JLabel("Player 1   " + score.player1score + " : " + score.player2score + "   Player 2", SwingConstants.CENTER);
-        scoreLabel.setForeground(Color.YELLOW);
-        scoreLabel.setFont(new Font("Consolas", Font.PLAIN, 20));
-
-        JLabel gameOverLabel = new JLabel("Game Over", SwingConstants.CENTER);
-        gameOverLabel.setForeground(Color.RED);
-        gameOverLabel.setFont(new Font("Consolas", Font.BOLD, 24));
-
-        panel.add(winnerLabel);
-        panel.add(scoreLabel);
-        panel.add(gameOverLabel);
-
-        endFrame.add(panel);
-        endFrame.setVisible(true);
-
-        gameThread.interrupt();
-    }
-
-
 
     public class LISTENER extends KeyAdapter {
         public void keyPressed(KeyEvent e){
