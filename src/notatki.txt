@@ -1,0 +1,20 @@
+HERMETYZACJA
+
+przyklad: klasa score, wyniki sa modyfikowane przez metody, a nie przez bezpośredni dostęp
+
+
+ABSTRAKCJA
+
+Klasa panel zarządza całą grą, ale nie zna szczegółów tego jak porusza sie piłka albo paletka
+
+
+POLIMORFIZM
+
+pozwala na różne używanie jednej metody w zależności od obiektu ktory ja wykonuje.
+np keylistener i keyPressed są nadpisywane w Paddle i zależą od id paletki
+
+
+DZIEDZICZENIE
+
+klasy paddle i ball dziedziczą po superklasie rectangle dziedzicząc jej funkcje
+np intersects do sprawdzania kolicji
